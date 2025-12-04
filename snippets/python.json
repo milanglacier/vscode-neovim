@@ -1,0 +1,80 @@
+{
+    "create python code chunk": {
+        "prefix": "rc",
+        "body": [
+            "# %%",
+            "",
+            "$0"
+        ],
+        "description": "create python code chunk"
+    },
+
+    "create python full code chunk": {
+        "prefix": "rc2",
+        "body": [
+            "# %%",
+            "",
+            "$0",
+            "",
+            "# %%"
+        ],
+        "description": "create python code chunk"
+    },
+
+    "create markdown chunk": {
+        "prefix": "mc",
+        "body": [
+            "# %% [markdown]",
+            "# $0"
+        ],
+        "description": "create markdown code chunk"
+    },
+
+    "create databricks source": {
+        "prefix": "dbs",
+        "body": [
+            "# Databricks notebook source",
+            "$0"
+        ],
+        "description": "create databricks notebook source"
+    },
+
+    "create databricks code chunk": {
+        "prefix": "dbc",
+        "body": [
+            "# COMMAND ----------",
+            "",
+            "$0",
+            "\n"
+        ],
+        "description": "create databricks code chunk"
+    },
+
+    "create databricks magic chunk": {
+        "prefix": "dbm",
+        "body": [
+            "# MAGIC $0"
+        ],
+        "description": "create databricks magic chunk"
+    },
+
+    "pd groupby apply series shortcut": {
+        "prefix": "gbs",
+        "body": [
+            "groupby($1).apply(lambda x: pd.Series({",
+            "$0",
+            "}), include_groups=False)"
+        ],
+        "description": "pd groupby apply series shortcut"
+    },
+
+    "pd pipe series shortcut": {
+        "prefix": "pps",
+        "body": [
+            "pipe(lambda x: pd.Series({",
+            "$0",
+            "}))"
+        ],
+        "description": "pd pipe series shortcut"
+    }
+}

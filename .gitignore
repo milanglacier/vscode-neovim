@@ -1,0 +1,6 @@
+.DS_Store
+.tags
+.luarc.json
+.aider*
+.env
+reference

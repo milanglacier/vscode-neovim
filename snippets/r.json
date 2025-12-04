@@ -1,0 +1,90 @@
+{
+    "create r full code chunk": {
+        "prefix": "rc2",
+        "body": [
+            "# %%",
+            "",
+            "$0",
+            "",
+            "# %%"
+        ],
+        "description": "create R full code chunk"
+    },
+
+    "create r code chunk": {
+        "prefix": "rc",
+        "body": [
+            "# %%",
+            "",
+            "$0"
+        ],
+        "description": "create R code chunk"
+    },
+
+    "httpgd": {
+        "prefix": "httpgd",
+        "body": [
+            "if (interactive()) httpgd::hgd()"
+        ],
+        "description": "start a hgd session for viewing plots."
+    },
+
+    "view data frame with formattable()": {
+        "prefix": "vdff",
+        "body": [
+            "|>",
+            "formattable::formattable()"
+        ],
+        "description": "View the data frame with formattable"
+    },
+
+    "view data frame with View()": {
+        "prefix": "vdfv",
+        "body": [
+            "|>",
+            "View()"
+        ],
+        "description": "View the data frame with View"
+    },
+
+    "pipe symbol": {
+        "prefix": "pip",
+        "body": ["%>% $0"],
+        "description": "pipe"
+    },
+
+    "assignment symbol": {
+        "prefix": "eq",
+        "body": ["<- $0"],
+        "description": "assignment symbol"
+    },
+
+    "create databricks source": {
+        "prefix": "dbs",
+        "body": [
+            "# Databricks notebook source",
+            "$0"
+        ],
+        "description": "create databricks notebook source"
+    },
+
+    "create databricks code chunk": {
+        "prefix": "dbc",
+        "body": [
+            "# COMMAND ----------",
+            "",
+            "$0",
+            "\n"
+        ],
+        "description": "create databricks code chunk"
+    },
+
+    "create databricks magic chunk": {
+        "prefix": "dbm",
+        "body": [
+            "# MAGIC $0"
+        ],
+        "description": "create databricks magic chunk"
+    }
+
+}

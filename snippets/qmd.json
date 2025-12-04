@@ -1,0 +1,297 @@
+{
+    "create r code chunk": {
+        "prefix": "rc",
+        "body": [
+            "```{r}",
+            "$0",
+            "```"
+        ],
+        "description": "create r code chunk"
+    },
+
+    "create python code chunk": {
+        "prefix": "pyc",
+        "body": [
+            "```{python}",
+            "$0",
+            "```"
+        ],
+        "description": "create r code chunk"
+    },
+
+    "create python plot chunk": {
+        "prefix": "pyp",
+        "body": [
+            "```{python}",
+            "#| label: fig-figure",
+            "#| fig-cap: 'caption of figure'",
+            "#| fig-align: 'center'",
+            "#| fig-width: 6",
+            "#| fig-height: 3",
+            "#| fig-format: 'jpeg'",
+            "#| fig-dpi: 300",
+            "#| out-width: '100%'",
+            "$0",
+            "```"
+        ],
+        "description": "create python plot code chunk"
+    },
+
+    "create r plot code chunk": {
+        "prefix": "rp",
+        "body": [
+            "```{r}",
+            "#| label: fig-figure",
+            "#| fig-cap: 'caption of figure'",
+            "#| fig-align: 'center'",
+            "#| fig-width: 6",
+            "#| fig-height: 3",
+            "#| fig-format: 'jpeg'",
+            "#| fig-dpi: 300",
+            "#| out-width: '100%'",
+            "$0",
+            "```"
+        ],
+        "description": "create r plot code chunk"
+    },
+
+    "create r table code chunk": {
+        "prefix": "rtbl",
+        "body": [
+            "```{r}",
+            "#| label: tbl-table",
+            "#| tbl-cap: 'caption of table'",
+            "$0",
+            "```"
+        ],
+        "description": "create r table code chunk"
+    },
+
+    "create python table code chunk using knitr": {
+        "prefix": "pytblkr",
+        "body": [
+            "```{python}",
+            "#| label: tbl-table",
+            "#| tbl-cap: 'caption of table'",
+            "#| output: asis",
+            "$0",
+            "print(${1:df}.to_markdown(index=False))",
+            "```"
+        ],
+        "description": "create python table code chunk using knitr"
+    },
+
+    "create python table code chunk using jupyter": {
+        "prefix": "pytbljp",
+        "body": [
+            "```{python}",
+            "#| label: tbl-table",
+            "#| tbl-cap: 'caption of table'",
+            "$0",
+            "Markdown(tablulate(${1:df}.values,headers=$1.columns))",
+            "```"
+        ],
+        "description": "create python table code chunk using jupyter"
+    },
+
+    "code to import printing table method": {
+        "prefix": "pyimptbl",
+        "body": [
+            "from IPython.display import Markdown",
+            "from tabulate import tabulate"
+        ],
+        "description": "code to import printing table method"
+    },
+
+    "httpgd": {
+        "prefix": "httpgd",
+        "body": [
+            "if (interactive()) httpgd::hgd()"
+        ],
+        "description": "start a hgd session for viewing plots."
+    },
+
+    "view data frame with formattable()": {
+        "prefix": "vdff",
+        "body": [
+            "|>",
+            "formattable::formattable()"
+        ],
+        "description": "View the data frame with formattable"
+    },
+
+    "view data frame with View()": {
+        "prefix": "vdfv",
+        "body": [
+            "|>",
+            "View()"
+        ],
+        "description": "View the data frame with View"
+    },
+
+    "create quarto pdf template": {
+
+        "prefix": "pdf",
+        "body": [
+            "---",
+            "title: 'qmd title'",
+            "author: 'Rongzhao Yan'",
+            "date: '01/14/2023'",
+            "execute:",
+            "  echo: false",
+            "  warning: false",
+            "  error: false",
+            "format:",
+            "  pdf:",
+            "    toc: true",
+            "    number-sections: true",
+            "    df-print: kable",
+            "    include-in-header:",
+            "      - env.tex",
+            "---",
+            "\n",
+            "$0"
+        ],
+        "description": "create quarto pdf template"
+    },
+
+    "create rmd beamer meta data": {
+
+        "prefix": "beamer",
+        "body": [
+            "---",
+            "title: 'qmd title'",
+            "author: 'Rongzhao Yan'",
+            "date: '01/14/2023'",
+            "execute:",
+            "  echo: false",
+            "  warning: false",
+            "  error: false",
+            "format:",
+            "  beamer:",
+            "    fontsize: '10pt'",
+            "    theme: 'metropolis'",
+            "    colortheme: 'spruce'",
+            "    df-print: kable",
+            "    include-in-header:",
+            "      - env.tex",
+            "---",
+            "\n",
+            "$0"
+        ],
+        "description": "create rmd beamer metadata"
+    },
+
+    "pipe symbol": {
+        "prefix": "pip",
+        "body": [
+            "%>% $0"
+        ],
+        "description": "pipe"
+    },
+
+    "i.i.d symbol": {
+        "prefix": "iid",
+        "body": ["\\overset{\\mathrm{iid}}{\\sim} $0"
+        ],
+        "description": "iid from"
+    },
+
+    "assignment symbol": {
+        "prefix": "eq",
+        "body": ["<- $0"],
+        "description": "assignment symbol"
+    },
+
+    "reference block": {
+        "prefix": "refchap",
+        "body": [
+            "# References",
+            "\n",
+            "<div id=\"refs\"></div>",
+            "$0"
+        ]
+    },
+
+    "\\begin{}…\\end{}": {
+        "prefix": "begin",
+        "body": [
+            "\\\\begin{${1:env}}",
+            "\t${1/(enumerate|itemize|list)|(description)|.*/(?1:\\item )(?2:\\item)/}$0",
+            "\\\\end{${1:env}}"
+        ],
+        "description": "Begin - End"
+    },
+
+    "cross reference": {
+        "prefix": "ref",
+        "body": [
+            "\\ref{${1:fig}:$2}$0"
+        ],
+        "description": "Reference"
+    },
+
+    "Figure": {
+        "prefix": "figure",
+        "body": [
+            "\\begin{figure}",
+            "\t\\begin{center}",
+            "\t\t\\includegraphics[width=1\\textwidth]{figures/$1}",
+            "\t\\end{center}",
+            "\t\\caption{$3}",
+            "\t\\label{fig:$4}",
+            "\\end{figure}",
+            "$0"
+        ],
+        "description": "Add a figure"
+    },
+
+    "command": {
+        "prefix": "cmd",
+        "body": [
+            "\\\\$1{$0}"
+        ],
+        "description": "insert a command"
+    },
+
+    "mathbf": {
+        "prefix": "mbf",
+        "body": [
+            "\\\\mathbf{$0}"
+        ],
+        "description": "mathbf"
+    },
+
+    "mathbb": {
+        "prefix": "mbb",
+        "body": [
+            "\\\\mathbb{$0}"
+        ],
+        "description": "mathbb"
+    },
+
+    "boldsymbol": {
+        "prefix": "boldsymbol",
+        "body": [
+            "\\\\boldsymbol{$0}"
+        ],
+        "description": "boldsymbol"
+    },
+
+    "mathrm": {
+        "prefix": "mrm",
+        "body": [
+            "\\\\mathrm{$0}"
+        ],
+        "description": "mathrm"
+    },
+
+    "mathcal": {
+        "prefix": "mcal",
+        "body": [
+            "\\\\mathcal{$0}"
+        ],
+        "description": "mathcal"
+    }
+
+}

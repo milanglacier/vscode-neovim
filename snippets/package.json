@@ -1,0 +1,42 @@
+{
+    "name": "my-snippers",
+    "engines": {
+        "vscode": "^1.11.0"
+    },
+    "contributes": {
+        "snippets": [
+            {
+                "language": "r",
+                "path": "./r.json"
+            },
+            {
+                "language": "rmd",
+                "path": "./rmd.json"
+            },
+            {
+                "language": "quarto",
+                "path": "./qmd.json"
+            },
+            {
+                "language": "markdown",
+                "path": "./qmd.json"
+            },
+            {
+                "language": "python",
+                "path": "./python.json"
+            },
+            {
+                "language": "tex",
+                "path": "./tex.json"
+            },
+            {
+                "language": "plaintex",
+                "path": "./tex.json"
+            },
+            {
+                "language": "sql",
+                "path": "./sql.json"
+            }
+        ]
+    }
+}

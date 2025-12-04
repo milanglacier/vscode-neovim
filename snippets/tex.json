@@ -1,0 +1,98 @@
+{
+    "newtheorem": {
+        "prefix": "newtheorem",
+        "body": [
+            "\\\\newtheorem{$1}{$1}[section]$0"
+        ],
+        "description": "newtheorem"
+    },
+
+    "textbf": {
+        "prefix": "textbf",
+        "body": [
+            "\\\\textbf{$0}"
+        ],
+        "description": "textbf"
+    },
+
+    "texttt": {
+        "prefix": "texttt",
+        "body": [
+            "\\\\texttt{$0}"
+        ],
+        "description": "texttt"
+    },
+
+    "emph": {
+        "prefix": "emph",
+        "body": [
+            "\\\\emph{$0}"
+        ],
+        "description": "emph"
+    },
+
+    "command": {
+        "prefix": "cmd",
+        "body": [
+            "\\\\$1{$0}"
+        ],
+        "description": "insert a command"
+    },
+
+    "cross reference": {
+        "prefix": "ref",
+        "body": [
+            "\\ref{${1:fig}:$2}$0"
+        ],
+        "description": "Reference"
+    },
+
+    "mathbf": {
+        "prefix": "mbf",
+        "body": [
+            "\\\\mathbf{$0}"
+        ],
+        "description": "mathbf"
+    },
+
+    "mathbb": {
+        "prefix": "mbb",
+        "body": [
+            "\\\\mathbb{$0}"
+        ],
+        "description": "mathbb"
+    },
+
+    "boldsymbol": {
+        "prefix": "boldsymbol",
+        "body": [
+            "\\\\boldsymbol{$0}"
+        ],
+        "description": "boldsymbol"
+    },
+
+    "mathrm": {
+        "prefix": "mrm",
+        "body": [
+            "\\\\mathrm{$0}"
+        ],
+        "description": "mathrm"
+    },
+
+    "mathcal": {
+        "prefix": "mcal",
+        "body": [
+            "\\\\mathcal{$0}"
+        ],
+        "description": "mathcal"
+    },
+
+    "xelatex": {
+        "prefix": "xelatex",
+        "body": [
+            "% !TEX TS-program = xelatex"
+        ],
+        "description": "xelatex"
+    }
+
+}
